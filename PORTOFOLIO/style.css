@@ -5,54 +5,63 @@
 }
 
 body {
-    font-family: "roboto", sans-serif;
+    font-family: "bee-serif", sans-serif;
+    background: url('assest/94fdbb7af74e09d1461547796ddf51e4.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 p {
     font-size: 1rem; /* 16px */
     line-height: 1.9rem;
+    color: #333;
 }
 
 a {
     text-decoration: none;
 }
 
+/* Container utama */
 .main-container {
     width: 1100px;
     margin: 0 auto;
 }
 
-/* button */
+/* Tombol */
 .btn {
     padding: 1rem 1.5rem;
-    background: rgb(56, 69, 56);
-    border: 1.5px solid rgb(3, 3, 3);
+    background: #E6A4B4;
+    border: 1.5px solid #F3D7CA;
     cursor: pointer;
+    color: white;
 }
 
-/* title */
+.btn:hover {
+    background: #F3D7CA;
+}
+
+/* Judul */
 .pre-title {
     text-transform: uppercase;
     letter-spacing: 0.5rem;
-    color: rgb(163, 174, 166);
+    color: #E6A4B4;
     position: relative;
     padding-left: 40px;
     width: fit-content;
     font-weight: 400;
-    font: size 1rem;
+    font-size: 1rem;
 }
 
 .pre-title::before {
     content: "";
     width: 20px;
     height: 1px;
-    background: black;
+    background: #E6A4B4;
     position: absolute;
     left: 0;
     top: 50%;
 }
 
-/* logo dan navbar menu */
+/* Navbar */
 .nav {
     display: flex;
     justify-content: space-between;
@@ -75,27 +84,27 @@ a {
 }
 
 .logo a {
-    color: rgb(56, 69, 56);
+    color: #E6A4B4;
 }
 
 nav ul li a {
-    color: rgb(92, 108, 89);
+    color: #E6A4B4;
 }
 
-/* home section */
+/* Home Section */
 #home {
     height: 720px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    background-color: rgb(255, 255, 255);
+    background-color: #FFF8E3;
 }
 
 .home-name {
     font-size: 3rem;
     font-weight: 700;
     margin: 0.5rem 0 1rem;
-    color: rgb(56, 69, 56);
+    color: #E6A4B4;
 }
 
 .home-right img {
@@ -169,7 +178,7 @@ section {
 
 /* About Section */
 #about {
-    background-color: rgb(175, 189, 179);
+    background-color: #F3D7CA;
     padding: 5rem 0;   
 }
 
@@ -179,14 +188,13 @@ section {
 }
 
 .about-icon img {
-    width: 60px; /* Ganti dengan ukuran yang diinginkan */
-    height: auto; /* Memastikan proporsi gambar tetap terjaga */
-    display: block; /* Menghapus ruang di bawah gambar */
-    margin: 0 auto; /* Memusatkan gambar dalam kontainer */
+    width: 60px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
-
-/* layout */
+/* Layout */
 .grid-3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -196,12 +204,12 @@ section {
 .about {
     padding: 3rem 2rem;
     text-align: center;
-    background: black;
+    background: #E6A4B4;
     border-radius: 0.7rem;
 }
 
 .about h4 {
-    color: rgba(229, 222, 222, 0.409);
+    color: #FFF8E3;
     margin: 0.5rem 0;
 }
 
@@ -210,127 +218,83 @@ section {
 }
 
 .about-icon {
-    background-color:  rgb(209, 207, 207);
+    background-color:  #F5EEE6;
     width: fit-content;
     margin: 0 auto;
     padding: 1rem 1rem;
     border-radius: 0.5rem;
 }
-/* end of .about */
 
-
-/*----- BAGIAN SKILLS -----*/
-
-.skills {
-    padding: 60px 15%;
-    background-color: #ffffff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+/* Progress Bar */
+.progress-bar.html {
+    background-color: #E6A4B4;
+    width: 70%;
 }
 
-.section-heading {
-    margin-bottom: 40px;
+.progress-bar.cooking {
+    background-color: #F3D7CA;
+    width: 85%;
+}
+
+.progress-bar.photography {
+    background-color: #E6A4B4;
+    width: 80%;
+}
+
+h3 {
+    margin: 10px 0;
+    color: #333;
     text-align: center;
-}
-
-h2 {
-    color: #000000;
-    font-size: 2rem;
-}
-
-.single-skill-content {
-    margin-bottom: 30px;
-}
-
-.barWrapper {
-    margin-bottom: 20px;
-}
-
-.progressText {
-    display: block;
+    font-size: 18px;
     font-weight: bold;
-    margin-bottom: 5px;
-    color: #3b3b3b;
 }
 
-.single-progress-txt {
+/* Progress Container */
+.progress-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
 }
 
 .progress {
-    flex-grow: 1;
-    background-color: #e0e0e0;
-    height: 30px;
-    position: relative;
-    margin-right: 15px;
-    border-radius: 15px;
+    background-color: #ddd;
+    border-radius: 20px;
     overflow: hidden;
+    height: 35px;
+    margin: 25px auto;
+    max-width: 600px;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 .progress-bar {
     height: 100%;
-    border-radius: 15px 0 0 15px;
-    transition: width 0.4s ease;
+    line-height: 35px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    position: relative;
 }
 
-/* Warna untuk masing-masing skill dan sesuai persentase */
-.progress-bar.adobe-illustrator {
-    background-color: #a4bda4;
-    width: 85%;
+.progress-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
 }
 
-.progress-bar.adobe-after-effects {
-    background-color: #a4bda4;
-    width: 75%;
-}
-
-.progress-bar.videography {
-    background-color: #a4bda4;
-    width: 80%;
-}
-
-.progress-bar.html {
-    background-color: #a4bda4;
-    width: 80%;
-}
-
-.progress-bar.figma {
-    background-color: #a4bda4;
-    width: 85%;
-}
-
-.progress-bar.communication {
-    background-color: #a4bda4;
-    width: 80%;
-}
-
-.progress-bar.creativity {
-    background-color: #a4bda4;
-    width: 85%;
-}
-
-h3 {
-    margin: 0;
-    color: #333;
-}
-
-/* Responsiveness */
-@media (max-width: 768px) {
-    .skills {
-        padding: 30px 10%;
-    }
-
-    h2 {
-        font-size: 2em;
-    }
-}
-
-
-
-/*---- CONTACT----*/
+/* Contact */
 .contact {
-    padding: 60px 15%; /* Sesuaikan padding horizontal di sini */
-    background-color: #cacdca91;
+    padding: 60px 15%;
+    background-color: #FFF8E3;
 }
 
 .section-heading {
@@ -356,30 +320,29 @@ input[type="email"],
 textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #000000;
+    border: 1px solid #E6A4B4;
     border-radius: 4px;
 }
 
 button {
     padding: 10px 15px;
-    background-color: #568550;
-    color: #fcfbfb;
+    background-color: #E6A4B4;
+    color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #909491;
+    background-color: #F3D7CA;
 }
 
-
-/* footer */
+/* Footer */
 footer {
     margin-bottom: 0;
     padding: 4rem 0;
-    background: rgb(130, 150, 136);
-    text-align: center; /* Meratakan teks di tengah */
+    background: #F3D7CA;
+    text-align: center;
 }
 
 .footer-container {
@@ -389,24 +352,124 @@ footer {
 }
 
 .footer-icons {
-    display: flex;                
-    justify-content: center;       
-    gap: 10px;                    
-    margin-bottom: 1rem;          
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 1rem;
 }
 
 .footer-icons a img {
-    width: 24px;    /* Ukuran ikon */
+    width: 24px;
     height: 24px;
 }
 
 footer p {
-    font-size: 0.9rem;  
-    color: #333;         
-    margin: 0;           
+    font-size: 0.9rem;
+    color: #333;
+    margin: 0;
 }
-
 
 html {
     scroll-behavior: smooth;
 }
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.moving-image {
+    animation: floating 3s infinite ease-in-out;
+}
+
+
+/* Reset default margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Warna baru */
+:root {
+    --primary-color: #E6A4B4;
+    --secondary-color: #F3D7CA;
+    --background-color: #FFF8E3;
+    --text-color: #4A4A4A;
+    --accent-color: #F5EEE6;
+}
+
+/* Body */
+body {
+    font-family: "Arial", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Main container */
+.main-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Navbar */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    background: var(--primary-color);
+    border-bottom: 3px solid var(--secondary-color);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.logo a:hover {
+    color: var(--accent-color);
+}
+
+/* Navbar Menu */
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav ul li a {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: 0.3s ease-in-out;
+}
+
+.nav ul li a:hover {
+    background: var(--secondary-color);
+    border-radius: 5px;
+    color: var(--text-color);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+
